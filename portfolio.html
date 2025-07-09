@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View a selection of my web design projects for small businesses, including bakeries, plumbers, and local freelancers.">
+    <title>Portfolio | Web Design Services</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <script>
+        // Custom Tailwind configuration
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            DEFAULT: '#2563eb',
+                            hover: '#1d4ed8'
+                        },
+                        neutral: {
+                            100: '#f8fafc',
+                            800: '#1e293b',
+                            900: '#0f172a'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white text-neutral-800 antialiased">
+
+    <div id="root" class="flex flex-col min-h-screen">
+
+        <!-- HEADER -->
+        <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 border-b border-neutral-200">
+            <div class="container mx-auto px-4">
+                <nav class="flex justify-between items-center py-4">
+                    <a href="index.html" class="text-2xl font-bold text-primary">AxiomWeb</a>
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="index.html" class="nav-link text-neutral-600 hover:text-primary transition-colors">Home</a>
+                        <a href="about.html" class="nav-link text-neutral-600 hover:text-primary transition-colors">About</a>
+                        <a href="portfolio.html" class="nav-link text-primary font-semibold">Portfolio</a>
+                        <a href="privacy.html" class="nav-link text-neutral-600 hover:text-primary transition-colors">Privacy</a>
+                    </div>
+                    <a href="index.html#contact" class="hidden md:inline-block bg-primary text-white font-semibold px-5 py-2 rounded-lg hover:bg-primary-hover transition-shadow shadow-sm hover:shadow-md">
+                        Get in Touch
+                    </a>
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-button" class="md:hidden text-neutral-800">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </nav>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden px-4 pb-4">
+                <a href="index.html" class="block py-2 text-neutral-600 hover:text-primary">Home</a>
+                <a href="about.html" class="block py-2 text-neutral-600 hover:text-primary">About</a>
+                <a href="portfolio.html" class="block py-2 text-primary font-semibold">Portfolio</a>
+                <a href="privacy.html" class="block py-2 text-neutral-600 hover:text-primary">Privacy</a>
+                <a href="index.html#contact" class="block mt-2 bg-primary text-white text-center font-semibold px-5 py-2 rounded-lg hover:bg-primary-hover">Get in Touch</a>
+            </div>
+        </header>
+
+        <main class="flex-grow">
+            <!-- PORTFOLIO HEADER -->
+            <section class="py-20 bg-neutral-100">
+                <div class="container mx-auto px-4 text-center">
+                    <h1 class="text-4xl md:text-5xl font-bold text-neutral-900" data-aos="fade-down">My Work</h1>
+                    <p class="text-lg md:text-xl text-neutral-600 max-w-3xl mx-auto mt-4" data-aos="fade-up" data-aos-delay="100">
+                        A selection of websites I've designed and built for happy clients.
+                    </p>
+                </div>
+            </section>
+
+            <!-- PORTFOLIO GRID -->
+            <section id="projects" class="py-20">
+                <div class="container mx-auto px-4">
+                    <div class="grid md:grid-cols-1 lg:grid-cols-2 gap-12">
+
+                        <!-- Project 1: The Corner Bakery -->
+                        <div class="bg-neutral-100 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300" data-aos="zoom-in" data-aos-duration="800" data-aos-easing="ease-in-out">
+                            <!-- Placeholder image from Pexels -->
+                            <img src="https://images.pexels.com/photos/205961/pexels-photo-205961.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                                 alt="Website screenshot for a bakery" 
+                                 class="w-full h-64 object-cover">
+                            <div class="p-8">
+                                <h3 class="text-2xl font-bold text-neutral-900 mb-2">The Corner Bakery</h3>
+                                <p class="text-neutral-600 mb-4">
+                                    A warm and inviting website for a local bakery, featuring a full menu, photo gallery, and an easy-to-find location map. The design focuses on showcasing delicious baked goods to attract foot traffic.
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">HTML5</span>
+                                    <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Tailwind CSS</span>
+                                    <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">JavaScript</span>
+                                    <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Static Site</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 2: Mike's Plumbing -->
+                        <div class="bg-neutral-100 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-out">
+                            <!-- Placeholder image from Pexels -->
+                            <img src="https://images.pexels.com/photos/4210315/pexels-photo-4210315.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                                 alt="Website screenshot for a plumbing service" 
+                                 class="w-full h-64 object-cover">
+                            <div class="p-8">
+                                <h3 class="text-2xl font-bold text-neutral-900 mb-2">Mike's Plumbing</h3>
+                                <p class="text-neutral-600 mb-4">
+                                    A professional and trustworthy website for a plumbing contractor. The site highlights emergency services, service areas, and customer testimonials to build credibility and generate leads.
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">HTML5</span>
+                                    <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Tailwind CSS</span>
+                                    <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Contact Form</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 3: Creative Freelancer -->
+                        <div class="bg-neutral-100 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300" data-aos="fade-left" data-aos-duration="800" data-aos-easing="ease-in-out">
+                            <!-- Placeholder image from Pexels -->
+                            <img src="https://images.pexels.com/photos/1181359/pexels-photo-1181359.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                                 alt="Website screenshot for a creative freelancer" 
+                                 class="w-full h-64 object-cover">
+                            <div class="p-8">
+                                <h3 class="text-2xl font-bold text-neutral-900 mb-2">Jane Doe | Copywriter</h3>
+                                <p class="text-neutral-600 mb-4">
+                                    A clean, minimalist portfolio site for a freelance copywriter. The design puts the focus on her work samples and professional blog, establishing her as an expert in her field.
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">HTML5</span>
+                                    <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Tailwind CSS</span>
+                                    <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Minimalist Design</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Project 4: Local Landscaping -->
+                        <div class="bg-neutral-100 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300" data-aos="flip-left" data-aos-duration="800" data-aos-easing="ease-in-out">
+                            <!-- Placeholder image from Pexels -->
+                            <img src="https://images.pexels.com/photos/1459495/pexels-photo-1459495.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                                 alt="Website screenshot for a landscaping company" 
+                                 class="w-full h-64 object-cover">
+                            <div class="p-8">
+                                <h3 class="text-2xl font-bold text-neutral-900 mb-2">GreenLeaf Landscaping</h3>
+                                <p class="text-neutral-600 mb-4">
+                                    A visually rich website for a landscaping company, using a gallery-first approach to showcase their beautiful garden transformations and services, from lawn care to full redesigns.
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">HTML5</span>
+                                    <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Tailwind CSS</span>
+                                    <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Photo Gallery</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="bg-neutral-900 text-neutral-300" data-aos="fade-in">
+            <div class="container mx-auto px-4 py-12">
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-4">AxiomWeb</h3>
+                        <p class="text-neutral-400">Helping small businesses succeed online with beautiful, functional websites.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-white mb-4">Quick Links</h3>
+                        <ul class="space-y-2">
+                            <li><a href="about.html" class="hover:text-primary transition-colors">About Me</a></li>
+                            <li><a href="portfolio.html" class="hover:text-primary transition-colors">Portfolio</a></li>
+                            <li><a href="privacy.html" class="hover:text-primary transition-colors">Privacy Policy</a></li>
+                            <li><a href="index.html#contact" class="hover:text-primary transition-colors">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-white mb-4">Connect</h3>
+                        <div class="flex space-x-4">
+                            <!-- Placeholder Social Icons -->
+                            <a href="#" class="text-neutral-400 hover:text-primary"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg></a>
+                            <a href="#" class="text-neutral-400 hover:text-primary"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" /></svg></a>
+                            <a href="#" class="text-neutral-400 hover:text-primary"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12.011c0 4.434 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12.011C22 6.477 17.523 2 12 2z" clip-rule="evenodd" /></svg></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8 pt-8 border-t border-neutral-800 text-center text-neutral-500">
+                    <p>&copy; 2025 AxiomWeb. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Simple Cookie Banner -->
+    <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-neutral-900 text-white p-4 text-center text-sm md:flex justify-between items-center hidden">
+        <p class="mb-2 md:mb-0">This website does not use tracking cookies. See our <a href="privacy.html" class="underline hover:text-primary">Privacy Policy</a> for more information.</p>
+        <button id="accept-cookies" class="bg-primary text-white font-semibold px-4 py-1 rounded-md hover:bg-primary-hover">Accept</button>
+    </div>
+
+    <script src="js/script.js"></script>
+    
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        once: true,
+        easing: 'ease-in-out'
+      });
+    </script>
+</body>
+</html>

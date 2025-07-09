@@ -1,0 +1,63 @@
+/* Custom Styles for the Website */
+
+/* Hero Section Animation */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-title-animation {
+    animation: fadeInDown 0.8s ease-out forwards;
+}
+
+.hero-subtitle-animation {
+    animation: fadeInUp 0.8s ease-out 0.3s forwards;
+    opacity: 0; /* Start hidden */
+}
+
+.hero-buttons-animation {
+    animation: fadeInUp 0.8s ease-out 0.6s forwards;
+    opacity: 0; /* Start hidden */
+}
+
+/* Active Navigation Link Styling */
+/* This is a fallback. The active state is primarily handled by JS, but this can be used for manual highlighting if needed. */
+.nav-link.active {
+    color: #2563eb; /* primary color */
+    font-weight: 600;
+}
+
+/* Custom prose styles for the privacy policy page */
+.prose h2 {
+    font-size: 1.5rem; /* 24px */
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #0f172a; /* neutral-900 */
+}
+
+.prose ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+}
+
+.prose li {
+    margin-bottom: 0.5rem;
+}
