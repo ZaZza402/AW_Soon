@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Learn about my mission to provide affordable, high-quality websites for small businesses with a focus on honest pricing and direct support.">
     <title>About Me | Web Design Services</title>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon2.png" />
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -49,13 +51,17 @@
     <div id="root" class="flex flex-col min-h-screen">
 
         <!-- HEADER -->
-        <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 border-b border-neutral-200">
+        <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-[60] border-b border-neutral-200">
             <div class="container mx-auto px-4">
                 <nav class="flex justify-between items-center py-4">
-                    <a href="index.html" class="text-2xl font-bold text-primary">AxiomWeb</a>
+                    <a href="index.html" class="flex items-center space-x-2">
+                    <img src="images/axiom-web-logo.png" alt="AxiomWeb Logo" class="w-12 h-12">
+                    <span class="text-2xl font-bold text-primary">AxiomWeb</span>
+                    </a>
                     <div class="hidden md:flex items-center space-x-8">
                         <a href="index.html" class="nav-link text-neutral-600 hover:text-primary transition-colors">Home</a>
                         <a href="about.html" class="nav-link text-primary font-semibold">About</a>
+                        <a href="services.html" class="nav-link text-neutral-600 hover:text-primary transition-colors">Services</a>
                         <a href="portfolio.html" class="nav-link text-neutral-600 hover:text-primary transition-colors">Portfolio</a>
                         <a href="privacy.html" class="nav-link text-neutral-600 hover:text-primary transition-colors">Privacy</a>
                     </div>
@@ -63,20 +69,26 @@
                         Get in Touch
                     </a>
                     <!-- Mobile Menu Button -->
-                    <button id="mobile-menu-button" class="md:hidden text-neutral-800">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    <button id="mobile-menu-button" class="md:hidden text-neutral-800 z-[120]">
+                        <svg id="menu-open-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                        <svg id="menu-close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
                     </button>
                 </nav>
             </div>
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="hidden md:hidden px-4 pb-4">
-                <a href="index.html" class="block py-2 text-neutral-600 hover:text-primary">Home</a>
-                <a href="about.html" class="block py-2 text-primary font-semibold">About</a>
-                <a href="portfolio.html" class="block py-2 text-neutral-600 hover:text-primary">Portfolio</a>
-                <a href="privacy.html" class="block py-2 text-neutral-600 hover:text-primary">Privacy</a>
-                <a href="index.html#contact" class="block mt-2 bg-primary text-white text-center font-semibold px-5 py-2 rounded-lg hover:bg-primary-hover">Get in Touch</a>
-            </div>
         </header>
+
+        <!-- MOBILE MENU & OVERLAY -->
+        <div id="mobile-menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-[100] hidden opacity-0 transition-opacity duration-300 ease-in-out"></div>
+        <div id="mobile-menu" class="fixed top-0 right-0 h-full w-4/5 max-w-xs bg-white z-[110] shadow-xl transform translate-x-full opacity-0 transition-all duration-300 ease-in-out p-8">
+            <div class="space-y-4">
+                <a href="index.html" class="nav-link block text-lg font-medium">Home</a>
+                <a href="about.html" class="nav-link block text-lg font-medium">About</a>
+                <a href="services.html" class="nav-link block text-lg font-medium">Services</a>
+                <a href="portfolio.html" class="nav-link block text-lg font-medium">Portfolio</a>
+                <a href="privacy.html" class="nav-link block text-lg font-medium">Privacy</a>
+                <a href="index.html#contact" class="block mt-6 w-full bg-primary text-white text-center font-semibold px-5 py-3 rounded-lg hover:bg-primary-hover">Get in Touch</a>
+            </div>
+        </div>
 
         <main class="flex-grow">
             <!-- ABOUT HEADER -->
@@ -109,6 +121,24 @@
                             </p>
                         </div>
                     </div>
+                </div>
+            </section>
+
+            <!-- STORY / WHY I DO THIS SECTION -->
+            <section id="story" class="py-20 bg-white">
+                <div class="container mx-auto px-4 max-w-4xl mx-auto">
+                    <h2 class="text-3xl font-bold text-neutral-900 mb-6" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
+                      Why I Do This
+                    </h2>
+                    <p class="text-neutral-600 leading-relaxed mb-4 italic" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
+                      A few years ago, I watched close friends and family struggle to get online — spending too much money on complicated websites that didn’t really work for their businesses. It frustrated me because I knew how important a simple, clear, and affordable online presence could be for local entrepreneurs.
+                    </p>
+                    <p class="text-neutral-600 leading-relaxed mb-4 italic" data-aos="fade-up" data-aos-delay="350" data-aos-duration="800">
+                      So I decided to combine my passion for web design with the latest smart tools and a hands-on approach. The result? Websites that are easy to manage, perform well, and truly reflect each business’s personality — without the usual headaches or inflated prices.
+                    </p>
+                    <p class="text-neutral-600 leading-relaxed italic" data-aos="fade-up" data-aos-delay="500" data-aos-duration="800">
+                      I believe everyone deserves to feel proud of their website. That’s why I’m here: to make the web simple, honest, and personal — one small business at a time.
+                    </p>
                 </div>
             </section>
 
